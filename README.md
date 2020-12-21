@@ -4,6 +4,8 @@ Tor train and test an anti spam filter use the following comand with the numbers
 
 `$ java AntiSpam_filtre DATA/test-data 100 200`
 
+The results should look like the following :
+
 ```
 Size of SPAM training data-set ? 200
 Size of HAM training data-set ? 200
