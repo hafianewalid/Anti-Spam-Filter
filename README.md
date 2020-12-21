@@ -1,6 +1,10 @@
-Exemple1 :
-java AntiSpam_filtre DATA/test-data 100 200
+# Anti Spam Filter
 
+Tor train and test an anti spam filter use the following comand with the numbers of spam an ham will be used in training and testing.
+
+`$ java AntiSpam_filtre DATA/test-data 100 200`
+
+```
 Size of SPAM training data-set ? 200
 Size of HAM training data-set ? 200
 Test :
@@ -50,22 +54,24 @@ Global error on 300 test-mails  :8 %
                  Precision average = 0.90604943
                  Rappel average   = 0.9175
                  F-mesure  average = 0.45564538
+```
 
+For train and save the an anti spam model you can use the following line command :
 
-Exemple2 :
-java Learning  DATA/train-data 500 1000
-le modele est sauvegarder dans model.txt
+`$ java Learning  DATA/train-data 500 1000`
 
+To check a message using an anti spam model you can use the following command :
 
+`$ java Mail_filtre model msg.txt`
 
-Exemple3 :
-java Mail_filtre model msg.txt
+```
+The results should look like :
+
 model Message msg.txt is un SPAM !
  With spam proba = 0.9999998112320735
  With ham proba = 1.8876792656914667E-7
+```
 
+To use an anti spam model for an online learning run the following command :
 
-
-
-Exemple4 :
-java Online_Learning model msg.txt SPAM
+`$  java Online_Learning model msg.txt SPAM`
